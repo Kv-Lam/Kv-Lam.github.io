@@ -5,7 +5,7 @@ export const AboutExperiences = () => {
         {
             employer: "Pellissippi State Community College", 
             location: "Knoxville, TN", 
-            position: "General Chemistry I Teaching Assistant and Supplemental Instructor", 
+            position: "General Chemistry I Tutor and Supplemental Instructor", 
             date: "Jan. 2023 - May 2023", 
             link:"https://www.pstcc.edu/learn/", 
             description: "Aided fellow students in understanding concepts, completing assignments, and checking lab reports in the Tutoring Center. Planned and operated three weekly supplemental instruction meetings to support students who required additional guidance on lessons or needed a more individualized tutor. Attended every lecture for a specific class section to develop a personalized supplemental instruction plan."
