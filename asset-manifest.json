@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Kv-Lam.github.io/static/css/main.d5e3af58.css",
-    "main.js": "/Kv-Lam.github.io/static/js/main.9b2c75e7.js",
-    "static/js/453.b21437c2.chunk.js": "/Kv-Lam.github.io/static/js/453.b21437c2.chunk.js",
-    "static/media/Roboto-Thin.ttf": "/Kv-Lam.github.io/static/media/Roboto-Thin.a732a12eb07742232407.ttf",
-    "static/media/OpenSans-Light.ttf": "/Kv-Lam.github.io/static/media/OpenSans-Light.9405e3d0d19c1cf91bad.ttf",
-    "static/media/LEMONMILK-Light.otf": "/Kv-Lam.github.io/static/media/LEMONMILK-Light.febd30d6f2b77941893c.otf",
-    "index.html": "/Kv-Lam.github.io/index.html",
-    "main.d5e3af58.css.map": "/Kv-Lam.github.io/static/css/main.d5e3af58.css.map",
-    "main.9b2c75e7.js.map": "/Kv-Lam.github.io/static/js/main.9b2c75e7.js.map",
-    "453.b21437c2.chunk.js.map": "/Kv-Lam.github.io/static/js/453.b21437c2.chunk.js.map"
+    "main.css": "/static/css/main.431e610a.css",
+    "main.js": "/static/js/main.6fac8250.js",
+    "static/js/453.b21437c2.chunk.js": "/static/js/453.b21437c2.chunk.js",
+    "static/media/Roboto-Thin.ttf": "/static/media/Roboto-Thin.a732a12eb07742232407.ttf",
+    "static/media/OpenSans-Light.ttf": "/static/media/OpenSans-Light.9405e3d0d19c1cf91bad.ttf",
+    "static/media/LEMONMILK-Light.otf": "/static/media/LEMONMILK-Light.febd30d6f2b77941893c.otf",
+    "index.html": "/index.html",
+    "main.431e610a.css.map": "/static/css/main.431e610a.css.map",
+    "main.6fac8250.js.map": "/static/js/main.6fac8250.js.map",
+    "453.b21437c2.chunk.js.map": "/static/js/453.b21437c2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d5e3af58.css",
-    "static/js/main.9b2c75e7.js"
+    "static/css/main.431e610a.css",
+    "static/js/main.6fac8250.js"
   ]
 }
