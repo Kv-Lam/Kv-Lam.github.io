@@ -1,5 +1,4 @@
 import React, { useRef } from "react"
-import logo from "./logo.svg"
 import "./App.css"
 import { NavigationBar } from "./components/NavigationBar"
 import { Banner } from "./components/Banner"

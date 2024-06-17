@@ -16,7 +16,7 @@ export const NavigationBar = ({ homeRef, aboutRef, projectsRef }) => {
   }, []);
 
   const scrollToSection = (ref, offset = 0) => {
-    if (ref && ref.current) {
+    if(ref && ref.current) {
       window.scrollTo({
         top: ref.current.offsetTop - offset,
         behavior: "smooth",
@@ -26,7 +26,7 @@ export const NavigationBar = ({ homeRef, aboutRef, projectsRef }) => {
 
   const handleNavigationClick = (index) => {
     setActiveIndex(index);
-    switch (index) {
+    switch(index) {
       case 0:
         scrollToSection(homeRef);
         break;
@@ -34,7 +34,7 @@ export const NavigationBar = ({ homeRef, aboutRef, projectsRef }) => {
         scrollToSection(aboutRef, 30);
         break;
       case 2:
-        scrollToSection(projectsRef);
+        scrollToSection(projectsRef, 40);
         break;
       default:
         break;

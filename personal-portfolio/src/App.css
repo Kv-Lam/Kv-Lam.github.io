@@ -44,6 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav {
   position: fixed;
+  flex-direction: row;
   top: 0;
   left: 0;
   width: 100%;
@@ -135,33 +136,34 @@ h1, h2, h3, h4, h5, h6 {
   width: 60px
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (min-width: 361px) and (max-width: 460px) {
   .nav {
-    width: 84%
+    width: 100%
   }
 
   .nav-links-item {
     padding: 10px 5px;
-    margin: 0 10px
+    margin: 0 10px;
+    font-size: 14px
   }
 
   .nav-slider {
-    width: 60px
+    width: 65px
   }
 
   .nav-slider.Home {
-    transform: translate(1px);
-    width: 60px
+    transform: translate(0px);
+    width: 65px
   }
 
   .nav-slider.About {
     transform: translate(75px);
-    width: 65px
+    width: 70px
   }
 
   .nav-slider.Projects {
-    transform: translate(138px);
-    width: 60px
+    transform: translate(156px);
+    width: 92px
   }
 }
 
@@ -228,6 +230,33 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media screen and (min-width: 2560px) {
+  .nav-links-item {
+      font-size: 25px;
+  }
+
+  .nav-slider {
+    left: 18px;
+    width: 115px;
+    height: 50px
+}
+
+  .nav-slider.Home {
+      transform: translate(0px);
+      width: 115px
+  }
+
+  .nav-slider.About {
+      transform: translate(150px);
+      width: 125px
+  }
+
+  .nav-slider.Projects {
+      transform: translate(308px);
+      width: 170px
+  }
+}
+
 /* Banner styling (Based on the styling from https://www.youtube.com/watch?v=hYv6BM2fWd8&list=PLd0qRSEDFQI7DgB5BKHQrryFlR02n1bK-) */
 
 .banner {
@@ -263,27 +292,67 @@ h1, h2, h3, h4, h5, h6 {
   display: block
 }
 
-.txt-rotate > .wrap {
-  border-right: .08em solid #666
-}
-
 .wrap {
   white-space: pre-wrap;
   display: block
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (min-width: 361px) and (max-width: 767px) {
   .banner {
-    padding: 60px 0px 100px 0px
+    padding: 100px 0px 100px
   }
   
   .banner .tagline {
-    font-size: 15px;
+    font-size: 14px;
   }
   
   .banner h1 {
     font-size: 30px;
     margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .banner {
+    padding: 150px 0px 100px
+  }
+  
+  .banner .tagline {
+    font-size: 16px;
+  }
+  
+  .banner h1 {
+    font-size: 40px;
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .banner {
+    padding: 200px 0px 100px
+  }
+  
+  .banner .tagline {
+    font-size: 18px;
+  }
+  
+  .banner h1 {
+    font-size: 50px;
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .banner {
+    padding: 250px 0px 100px
+  }
+  
+  .banner .tagline {
+    font-size: 40px;
+  }
+  
+  .banner h1 {
+    font-size: 75px;
   }
 }
 
@@ -383,14 +452,67 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 2px 3px #0000003d
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 361px) and (max-width: 767px) {
+  .Information, #Projects {
+    padding: 0px 25px
+  }
 
+  .About-Description {
+    font-size: 15px;
+  }
+
+  .Skills-Boxes {
+    font-size: 15px;
+  }
+
+  .Education-Institute {
+    font-size: 18px
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .Information, #Projects {
+    padding: 0px 50px
+  }
+
+  .About-Description {
+    font-size: 17px;
+  }
+
+  .Skills-Boxes {
+    font-size: 17px;
+  }
+
+  .Education-Institute {
+    font-size: 20px
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .Information, #Projects {
+    padding: 0px 75px
+  }
+
+  .About-Description {
+    font-size: 19px;
+  }
+
+  .Skills-Boxes {
+    font-size: 19px;
+  }
+
+  .Education-Institute {
+    font-size: 22px
+  }
+}
+
+@media screen and (min-width: 1280px) {
   .Information, #Projects {
       gap: 20px
   }
 
   .About-Description {
-      font-size: 20px
+      font-size: 21px
   }
 
   .About-Title, .Skills-Title, .Education-Title, .Education-Title, .Experiences-Title, .Projects-Title {
@@ -399,11 +521,54 @@ h1, h2, h3, h4, h5, h6 {
 
   .Skills-Boxes {
       gap: 7px;
-      font-size: 20px
+      font-size: 21px
   }
 
   .Skills-Boxes span {
       padding: 6px
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .Information, #Projects {
+      gap: 40px
+  }
+
+  .About-Description {
+      font-size: 28px
+  }
+
+  .About-Title, .Skills-Title, .Education-Title, .Education-Title, .Experiences-Title, .Projects-Title {
+      font-size: 55px
+  }
+
+  .Skills-Boxes {
+      gap: 10px;
+      font-size: 30px
+  }
+
+  .Skills-Boxes span {
+      padding: 8px
+  }
+
+  .Education-Date, .Experience-Date {
+    font-size: 25px
+  }
+
+  .Education-Institute, .Education-GPA, .Experience-Employer {
+    font-size: 40px
+  }
+
+  .Education-Degree {
+    font-size: 35px
+  }
+
+  .Experience-Location, .Experience-Position {
+    font-size: 35px
+  }
+
+  .Experience-Description {
+    font-size: 30px
   }
 }
 
@@ -433,7 +598,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   gap: 30px;
   font-size: 16px;
-  margin-right: 20px
+  justify-content: center
 }
 
 @media screen and (min-width: 650px) {
@@ -442,15 +607,20 @@ h1, h2, h3, h4, h5, h6 {
       align-items: center;
       justify-content: space-between;
       flex-direction: row;
-      padding: 30px 0;
+      padding: 30px 6px;
       border-top: 1px solid #2d2d2d;
       margin-top: 100px
   }
 
   .Footer-Socials {
-      display: flex;
       gap: 20px;
       font-size: 18px
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .Footer span {
+      font-size: 15px
   }
 }
 
@@ -460,11 +630,11 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto;
   border-radius: 50px;
   background-color: rgb(255 255 255 / 10%);
-  overflow: hidden
+  overflow: hidden;
 }
 
 .Project .nav.nav-pills .nav-item {
-  width: 33.33333%
+  width: 33.33333%;
 }
 
 .Project .nav.nav-pills .nav-link {
@@ -479,39 +649,39 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   transition: 0.3s ease-in-out;
   text-align: center;
-  z-index: 0
+  z-index: 0;
 }
 
 .Project .nav.nav-pills .nav-link::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 100%;
-    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: 0.3s ease-in-out
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
 }
 
 .Project .nav.nav-pills .nav-link.active::before {
-    width: 100% !important
+  width: 100% !important;
 }
 
 .Project .nav.nav-pills .nav-link.active {
-    border: 1px solid rgba(255, 255, 255, 1)
+  border: 1px solid rgba(255, 255, 255, 1);
 }
 
 .nav-link#projects-tabs-tab-first {
   border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 55px 55px 55px 55px
+  border-radius: 55px 55px 55px 55px;
 }
 
 .Project-Image-Box {
   position: relative;
   border-radius: 30px;
   overflow: hidden;
-  margin-bottom: 24px
+  margin-bottom: 24px;
 }
 
 .Project-Image-Box::before {
@@ -521,11 +691,11 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   width: 100%;
   height: 0;
-  transition: 0.4s ease-in-out
+  transition: 0.4s ease-in-out;
 }
 
 .Project-Image-Box:hover::before {
-  height: 100%
+  height: 100%;
 }
 
 .Project-Text {
@@ -538,29 +708,44 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0;
   width: 100%;
   color: white;
-  font-family: "OpenSans-Light"
+  font-family: "OpenSans-Light";
 }
 
 .Project-Image-Box:hover .Project-Text {
   top: 50%;
-  opacity: 1
+  opacity: 1;
 }
 
 .Project-Text h4 {
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 0.8px;
-  line-height: 1.1em
+  line-height: 1.1em;
 }
 
 .Project-Text span {
   font-weight: 400;
   font-size: 15px;
-  letter-spacing: 0.8px
+  letter-spacing: 0.8px;
 }
 
 .Project-Image-Box img {
   width: 100%;
   height: 100%;
-  object-fit: cover
+  object-fit: cover;
+}
+
+.Project-Image-Box.Touch-Screen::before {
+  height: 100%;
+}
+
+.Project-Image-Box.Touch-Screen .Project-Text {
+  top: 50%;
+  opacity: 1;
+}
+
+@media screen and (min-width: 2560px) {
+  .Project-Text span {
+    font-size: 20px
+  }
 }

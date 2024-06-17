@@ -1,18 +1,26 @@
 import { Col, Nav, Row, Tab } from "react-bootstrap"
 import { ProjectCard } from "./ProjectCard"
 import React from "react"
-import testingImage from "../assets/images/Testing.png"
+import GitHubImage from "../assets/images/GitHub.png"
 
 
 export const Projects = () => {
+
+    const DetectTouchscreen = () => {
+        return 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+    }
+
     const projects = [
         {
             title: "Dungeon Game",
             description: "ASCII terminal-based game that allows users to utilize their own dungeons.",
-            image: testingImage,
+            image: GitHubImage,
             github: "https://github.com/Kv-Lam/ASCII-Terminal-Dungeon-Game"
         },
     ]
+
+    const isTouchScreen = DetectTouchscreen();
+
     return (
         <div className="Projects-Container">
             <h2 className="Projects-Title">Projects</h2>
@@ -23,7 +31,7 @@ export const Projects = () => {
                             <Tab.Pane eventKey="first">
                                 <Row>
                                     {projects.map((project, key) => (
-                                        <ProjectCard key={key} {...project} />
+                                        <ProjectCard key={key} {...project} isTouchScreen={isTouchScreen} />
                                     ))}
                                 </Row>
                             </Tab.Pane>
