@@ -1,7 +1,7 @@
 import React from 'react'
 
 export const AboutSkills = () => {
-    const skills = ["C++", "Python", "GitHub", "Git", "JavaScript", "React", "HTML", "CSS",];
+    const skills = ["C++", "Python", "Godot", "C", "Git", "GitHub", "JavaScript", "React", "HTML/CSS"];
 
     return (
         <div className="About-Skills-Container">
