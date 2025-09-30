@@ -3,6 +3,14 @@ import React from "react"
 export const AboutExperiences = () => {
     const experiences = [
         {
+            employer: "University of Tennessee, Knoxville", 
+            location: "Knoxville, TN", 
+            position: "Undergraduate Research Assistant @ STARI Lab", 
+            date: "May. 2025 - Current", 
+            link:"https://stari.labs.utk.edu", 
+            description: "Designed and implemented a speech-to-response pipeline for NAO robots using Python, Flask, and Vosk. Integrated a locally hosted LLM with tools through LangChain to build an agent capable of contextual conversations. Collaborated with fellow URAs to establish the STARI Lab under the guidance of Dr. Rachael Bevill Burns. Restored and debugged legacy NAO robots (~15 years old) alongside URAs for future experiments"
+        },
+        {
             employer: "Pellissippi State Community College", 
             location: "Knoxville, TN", 
             position: "General Chemistry I Tutor and Supplemental Instructor", 

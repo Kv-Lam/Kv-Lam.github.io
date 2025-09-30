@@ -12,8 +12,20 @@ export const Projects = () => {
 
     const projects = [
         {
-            title: "Dungeon Game",
-            description: "ASCII terminal-based game that allows users to utilize their own dungeons.",
+            title: "Credit Card Fraud Detection",
+            description: "Uses machine learning to detect fraudulent credit card transactions with a Logistic Regression model.",
+            image: GitHubImage,
+            github: "https://github.com/Kv-Lam/CCF_CS325"
+        },
+        {
+            title: "Dungeons of Delgrhiard",
+            description: "Isometric Godot dungeon game with custom art.",
+            image: GitHubImage,
+            github: "https://github.com/Kv-Lam/Godot-Dungeon-Game"
+        },
+        {
+            title: "C+++ Terminal Dungeon Game",
+            description: "C++ ASCII terminal-based game with customizable dungeons.",
             image: GitHubImage,
             github: "https://github.com/Kv-Lam/ASCII-Terminal-Dungeon-Game"
         },

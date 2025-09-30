@@ -3,8 +3,14 @@ import React from "react"
 export const AboutEducation = () => {
     const educations = [
         {
+            institute: "University of Tennssee, Knoxville",
+            degree: "MS in Computer Science (5-year-pathway)",
+            date: "Aug. 2025 - Expected Graduation: May 2027",
+            GPA: "N/A"
+        },
+        {
             institute: "University of Tennessee, Knoxville", 
-            degree: "BS in Computer Science", 
+            degree: "BS in Computer Science | Machine Learning minor", 
             date: "Aug. 2023 - Expected Graduation: May 2026", 
             GPA: "4.0"
         },
