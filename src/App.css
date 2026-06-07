@@ -1,0 +1,566 @@
+/* Fonts and general styling. */
+
+@font-face {
+  font-family: 'Roboto-Thin';
+  src: url('./assets/fonts/Roboto-Thin.ttf')
+}
+
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url('./assets/fonts/OpenSans-Light.ttf')
+}
+
+@font-face {
+  font-family: 'LEMONMILK-Light';
+  src: url('./assets/fonts/LEMONMILK-Light.otf')
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  background-color: #121212 !important;
+  color: #fff !important;
+  font-family: 'Roboto-Thin'
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  line-height: normal
+}
+
+/* Navigation bar (based on https://www.miraya.tech; A lot is added/changed to fit my website) */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  margin-top: 15px;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+  user-select: none
+}
+
+.nav-links,.nav-links-filled {
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  border: 1px solid transparent;
+  transition: all .2s ease;
+  position: relative
+}
+
+.nav-links-filled {
+  background: rgba(114,114,114,.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid #404040b5;
+  box-shadow: 0 2px 10px #0000001a
+}
+
+.nav-links-filled .nav-links-item,.nav-links-filled .nav-links-item.contact {
+  color: #fff
+}
+
+.nav-links-filled .nav-slider {
+  background: rgba(79,79,79,.4)
+}
+
+.nav-links-item {
+  cursor: pointer;
+  transition: all .2s ease;
+  font-size: 13px;
+  z-index: 2;
+  padding: 15px 5px;
+  margin: 0 5px;
+  font-weight: 300;
+  font-family: 'LEMONMILK-Light', 'OpenSans-Light'
+}
+
+.nav-links-item.contact {
+  border: none;
+  font-weight: 300;
+  color: var(--text-color);
+  background-color: transparent
+}
+
+.nav-links-item:hover {
+  cursor: pointer;
+  color: #fff;
+  transition: all .2s ease
+}
+
+.nav-links-item.active,.nav-links-item.active:hover {
+  color: #fff;
+  transition: all .2s ease
+}
+
+.nav-slider {
+  position: absolute;
+  left: 5px;
+  width: 50px;
+  height: 30px;
+  border-radius: 30px;
+  background: rgba(79,79,79,.25);
+  transition: transform .3s cubic-bezier(.34,1.56,.64,1)
+}
+
+.nav-slider.Home {
+  transform: translate(0);
+  width: 50px
+}
+
+.nav-slider.About {
+  transform: translate(55px);
+  width: 60px
+}
+
+.nav-slider.Projects {
+  transform: translate(112px);
+  width: 60px
+}
+
+@media screen and (max-width: 460px) {
+  .nav {
+    width: 84%
+  }
+
+  .nav-links-item {
+    padding: 10px 5px;
+    margin: 0 10px
+  }
+
+  .nav-slider {
+    width: 60px
+  }
+
+  .nav-slider.Home {
+    transform: translate(1px);
+    width: 60px
+  }
+
+  .nav-slider.About {
+    transform: translate(75px);
+    width: 65px
+  }
+
+  .nav-slider.Projects {
+    transform: translate(138px);
+    width: 60px
+  }
+}
+
+@media screen and (min-width: 461px) {
+  .nav-links-item {
+      font-size:14px;
+      padding: 15px;
+      margin: 0 5px
+  }
+
+  .nav-slider {
+      left: 8px;
+      width: 70px;
+      height: 35px
+  }
+
+  .nav-slider.Home {
+      transform: translate(0px)
+  }
+
+  .nav-slider.About {
+      transform: translate(80px)
+  }
+
+  .nav-slider.Projects {
+      transform: translate(160px)
+  }
+}
+
+@media screen and (min-width: 690px) {
+  .nav {
+      margin-top:30px
+  }
+
+  .nav-links-item {
+      cursor: pointer;
+      transition: all .2s ease;
+      font-size: 17px;
+      z-index: 2;
+      padding: 18px 30px;
+      margin: 0 5px;
+      font-weight: 300
+  }
+
+  .nav-slider {
+      left: 13px;
+      width: 100px;
+      height: 40px
+  }
+
+  .nav-slider.Home {
+      transform: translate(0px);
+      width: 100px
+  }
+
+  .nav-slider.About {
+      transform: translate(127px);
+      width: 100px
+  }
+
+  .nav-slider.Projects {
+      transform: translate(257px);
+      width: 130px
+  }
+}
+
+/* Banner styling (Based on the styling from https://www.youtube.com/watch?v=hYv6BM2fWd8&list=PLd0qRSEDFQI7DgB5BKHQrryFlR02n1bK-) */
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  padding: 260px 0px 100px;
+  text-align: center;
+  width: 100%
+}
+
+.banner .tagline {
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 8px 10px;
+  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  margin-bottom: 16px;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner h1 {
+  font-size: 65px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  margin-bottom: 20px;
+  display: block
+}
+
+.txt-rotate > .wrap {
+  border-right: .08em solid #666
+}
+
+.wrap {
+  white-space: pre-wrap;
+  display: block
+}
+
+@media screen and (max-width: 460px) {
+  .banner {
+    padding: 60px 0px 100px 0px
+  }
+  
+  .banner .tagline {
+    font-size: 15px;
+  }
+  
+  .banner h1 {
+    font-size: 30px;
+    margin-bottom: 0px;
+  }
+}
+
+/* Titles and main containers styling */
+.Information, #Projects {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-weight: 100;
+  letter-spacing: 0.8px;
+  margin-bottom: 20px;
+  padding: 0px 100px
+}
+
+.About-Title, .Skills-Title, .Education-Title, .Experiences-Title, .Projects-Title {
+  font-size: 36px;
+  font-weight: 100;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  margin-bottom: 20px;
+  font-family: 'LEMONMILK-Light'
+}
+
+.Skills-Title {
+  line-height: 2
+}
+
+.Education-Title, .Experiences-Title, .Projects-Title {
+  line-height: 3.5;
+  margin-bottom: 0px
+}
+
+.About-Description {
+  font-size: 10px;
+  font-weight: 100;
+  line-height: 1.6;
+  margin-bottom: 30px
+}
+
+.Education-Items-Container {
+  display: flex;
+  flex-direction: row
+}
+
+.Education-Item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  border: 1px solid #333333;
+  background-color: #232323;
+  border-radius: 15px
+}
+
+.Experience-Item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  border: 1px solid #333333;
+  background-color: #232323;
+  border-radius: 15px;
+}
+
+.Education-Date, .Experience-Date {
+  display: block;
+  padding: 7px 0 0 0
+}
+
+.Experience-Position {
+  white-space: pre-wrap;
+  display: block
+}
+
+.Education-GPA, .Experience-Location {
+  font-weight: 100;
+  font-size: 20px
+}
+
+.Experience-Description {
+  display: block;
+  font-size: 18px;
+  padding: 0 0 7px 18px
+}
+
+.Skills-Boxes {
+  gap: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 10px
+}
+
+.Skills-Boxes span {
+  padding: 5px;
+  border-radius: 2px;
+  border: 1px solid #333333;
+  background-color: #232323;
+  box-shadow: 0 2px 3px #0000003d
+}
+
+@media screen and (min-width: 650px) {
+
+  .Information, #Projects {
+      gap: 20px
+  }
+
+  .About-Description {
+      font-size: 20px
+  }
+
+  .About-Title, .Skills-Title, .Education-Title, .Education-Title, .Experiences-Title, .Projects-Title {
+      font-size: 40px
+  }
+
+  .Skills-Boxes {
+      gap: 7px;
+      font-size: 20px
+  }
+
+  .Skills-Boxes span {
+      padding: 6px
+  }
+}
+
+/* Footer styling */
+
+.Footer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  padding: 30px 0;
+  border-top: 1px solid #2d2d2d;
+  margin-top: 30px
+}
+
+.Footer span {
+  font-size: 12px;
+  font-family: 'OpenSans-Light', 'Roboto-Thin'
+}
+
+.Footer-Link:hover {
+  text-decoration: underline
+}
+
+.Footer-Socials {
+  display: flex;
+  gap: 30px;
+  font-size: 16px;
+  margin-right: 20px
+}
+
+@media screen and (min-width: 650px) {
+  .Footer {
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      padding: 30px 0;
+      border-top: 1px solid #2d2d2d;
+      margin-top: 100px
+  }
+
+  .Footer-Socials {
+      display: flex;
+      gap: 20px;
+      font-size: 18px
+  }
+}
+
+/* Projects section styling  */
+.Project .nav.nav-pills {
+  width: 72%;
+  margin: 0 auto;
+  border-radius: 50px;
+  background-color: rgb(255 255 255 / 10%);
+  overflow: hidden
+}
+
+.Project .nav.nav-pills .nav-item {
+  width: 33.33333%
+}
+
+.Project .nav.nav-pills .nav-link {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 17px 0;
+  color: #fff;
+  width: 100%;
+  font-size: 17px;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+  z-index: 0
+}
+
+.Project .nav.nav-pills .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.3s ease-in-out
+}
+
+.Project .nav.nav-pills .nav-link.active::before {
+    width: 100% !important
+}
+
+.Project .nav.nav-pills .nav-link.active {
+    border: 1px solid rgba(255, 255, 255, 1)
+}
+
+.nav-link#projects-tabs-tab-first {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 55px 55px 55px 55px
+}
+
+.Project-Image-Box {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 24px
+}
+
+.Project-Image-Box::before {
+  content: "";
+  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  opacity: 0.85;
+  position: absolute;
+  width: 100%;
+  height: 0;
+  transition: 0.4s ease-in-out
+}
+
+.Project-Image-Box:hover::before {
+  height: 100%
+}
+
+.Project-Text {
+  position: absolute;
+  text-align: center;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  width: 100%;
+  color: white;
+  font-family: "OpenSans-Light"
+}
+
+.Project-Image-Box:hover .Project-Text {
+  top: 50%;
+  opacity: 1
+}
+
+.Project-Text h4 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1.1em
+}
+
+.Project-Text span {
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.8px
+}
+
+.Project-Image-Box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover
+}
